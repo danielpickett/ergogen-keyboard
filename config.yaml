@@ -59,14 +59,18 @@ points:
 
   mirror:
     ref: matrix_inner_top
-    distance: 60
+    distance: 120
             
 outlines:
-  keys:
+  left_switch_cutouts:
     - what: rectangle
       where: true
       size: [14, 14]
       fillet: 0
+  left_keycaps:
+    - what: rectangle
+      where: true
+      size: [18, 18]
   board_left:
     - what: polygon
       operation: stack
@@ -87,13 +91,21 @@ outlines:
   board_left_with_cutouts:
     - name: board_left
     - operation: subtract
-      name: keys
+      name: left_switch_cutouts
+  
+  board_left_with_keycaps:
+    - name: board_left
+    - operation: subtract
+      name: left_keycaps
+  
 
 pcbs:
   left:
     outlines:
       main:
         outline: board_left
+      keys: keys
+
     footprints:
       keyswitches:
         where: true
@@ -108,5 +120,6 @@ pcbs:
           orientation: up
         where:
           ref: matrix_inner_top
-          shift: [0, 0]
+          shift: [22.5, -5.375]
+          rotate: -90
       

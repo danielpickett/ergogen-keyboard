@@ -1,0 +1,14 @@
+{
+  "name": "ergogen-keyboard",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:danielpickett/ergogen-keyboard.git",
+  "author": "Daniel Pickett <daniel@danielpickett.me>",
+  "license": "MIT",
+  "dependencies": {
+    "ergogen": "^4.1.0"
+  },
+  "scripts": {
+    "build": "ergogen ."
+  }
+}
