@@ -9,6 +9,6 @@
     "ergogen": "^4.1.0"
   },
   "scripts": {
-    "build": "ergogen ."
+    "build": "rm -rf ./output && ergogen ."
   }
 }
