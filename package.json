@@ -9,6 +9,6 @@
     "ergogen": "^4.1.0"
   },
   "scripts": {
-    "build": "rm -rf ./output && ergogen ."
+    "build": "rm -rf ./output/outlines/* && rm -rf ./output/pcbs/* && ergogen ."
   }
 }

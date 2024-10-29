@@ -5,27 +5,24 @@ points:
     matrix:
       columns:
         outer:
-          key:
-            column_net: P020
+          key.column_net: P020
         pinky:
-          key:
-            column_net: P022
+          key.column_net: P022
         ring:
-          key:
-            column_net: P024
+          key.column_net: P024
         middle:
-          key:
-            column_net: P100
+          key.column_net: P100
         index:
-          key:
-            column_net: P011
+          key.column_net: P011
         inner:
-          key:
-            column_net: P017
+          key.column_net: P017
       rows:
         bottom:
+          row_net: P113
         home:
+          row_net: P002
         top:
+          row_net: P029
       anchor:
         shift: [100, -100]
     thumbfan:
@@ -54,12 +51,7 @@ points:
             shift: [0, -.25u]
       rows:
         thumb:
-          row_net: thumb_row
-      
-
-  mirror:
-    ref: matrix_inner_top
-    distance: 120
+          row_net: P115
             
 outlines:
   left_switch_cutouts:
@@ -111,8 +103,17 @@ pcbs:
         what: mx
         params:
           hotswap: true
+          keycaps: true
           from: "{{col_net}}"
           to: "{{colrow}}"
+      diode:
+        what: diode
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, -9]
       nice_nano:
         what: nice_nano
         params:
