@@ -1,5 +1,3 @@
-# Caldera Original
-
 units:
   pad: (u / 2) + 2
   
@@ -15,20 +13,52 @@ points:
         index.key.column_net: P011
         inner.key.column_net: P017
       rows:
-        mod.row_net: P113
-        bot.row_net: P115
-        hom.row_net: P002
+        bottom.row_net: P115
+        home.row_net: P002
         top.row_net: P029
       anchor:
         # Shift the PCB slightly to the right and down, otherwise it's weirdly positioned outside of the main sheet in KiCad
         shift: [100, -150]
-  
+    thumbfan:
+      anchor:
+        ref: matrix_ring_bottom
+        shift: [0.334u, -1u]
+      columns:
+        one.key.column_net: P022
+        two.key.column_net: P024
+        three:
+          key:
+            height: 1.5u
+            origin: [-0.5u, -0.5u]
+            shift: [0, -1.5]
+            splay: -33
+            column_net: P100
+            
+        four:
+          key:
+            spread: 1u
+            stagger: -0.1u
+            shift: [0, -.25u]
+            column_net: P011
+        five:
+          key:
+            spread: 0
+            stagger: 1u
+            shift: [0, -.25u]
+            column_net: P017
+      rows:
+        thumb:
+          row_net: P113
+
 outlines:
   keys:
     - what: rectangle
       where: true
       size: [14, 14]
-      fillet: 0
+  keycaps:
+    - what: rectangle
+      where: true
+      size: [18.25, 18.25]
   board_left:
     - what: polygon
       operation: stack
@@ -39,17 +69,21 @@ outlines:
           shift: [-pad, pad]
         # Top right
         - ref: matrix_inner_top
-          shift: [pad, pad]
+          shift: [pad + 40, pad]
         # Bottom right
-        - ref: matrix_inner_mod
-          shift: [pad, -pad]
+        - ref: matrix_inner_bottom
+          shift: [pad + 40, -pad - 50]
         # Bottom right
-        - ref: matrix_outer_mod
-          shift: [-pad, -pad]
-  board_left_with_cutouts:
+        - ref: matrix_outer_bottom
+          shift: [-pad, -pad - 50]
+  board_left_with_key_cutouts:
     - name: board_left
     - operation: subtract
       name: keys
+  board_left_with_keycap_cutouts:
+    - name: board_left
+    - operation: subtract
+      name: keycaps
 
 
 pcbs:
@@ -65,7 +99,7 @@ pcbs:
         params:
           keycaps: true
           reverse: false
-          hotswap: true
+          # hotswap: true
           from: "{{column_net}}"
           to: "{{colrow}}"
       # Diodes
@@ -76,8 +110,8 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [0, -9]
-          rotate: 0
+          shift: [0, -9.5]
+          rotate: 180
 
       # Controller
       nice_nano:
@@ -86,8 +120,9 @@ pcbs:
           orientation: up
         where:
           ref: matrix_inner_top
-          shift: [50, -20]
+          shift: [20, -10]
           rotate: -90
+
       # Battery jack
       jstph:
         what: jstph
@@ -99,6 +134,7 @@ pcbs:
             side: B
             pos: pos
             neg: GND
+
       # Reset switch (horizontal community version)
       horizontal_reset:
         what: EVQPUC
@@ -108,14 +144,15 @@ pcbs:
           to: RST 
         where:
           ref: matrix_inner_top
-          shift: [20, 0]
+          shift: [40, -15]
           rotate: 0
+
       # Battery on/off switch
       battery_switch:
         what: slider
         where:
             ref: matrix_inner_top
-            shift: [30, 0]
+            shift: [40, -30]
             rotate: 0
         params:
             side: B
