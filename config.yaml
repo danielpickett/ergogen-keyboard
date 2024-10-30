@@ -1,112 +1,75 @@
+# Caldera Original
+
 units:
-  pad: u/2 + 3
+  pad: (u / 2) + 2
+  
+
 points:
   zones:
     matrix:
       columns:
-        outer:
-          key.column_net: P020
-        pinky:
-          key.column_net: P022
-        ring:
-          key.column_net: P024
-        middle:
-          key.column_net: P100
-        index:
-          key.column_net: P011
-        inner:
-          key.column_net: P017
+        outer.key.column_net: P020 
+        pinky.key.column_net: P022 
+        ring.key.column_net: P024
+        middle.key.column_net: P100 
+        index.key.column_net: P011
+        inner.key.column_net: P017
       rows:
-        bottom:
-          row_net: P113
-        home:
-          row_net: P002
-        top:
-          row_net: P029
+        mod.row_net: P113
+        bot.row_net: P115
+        hom.row_net: P002
+        top.row_net: P029
       anchor:
-        shift: [100, -100]
-    thumbfan:
-      anchor:
-        ref: matrix_ring_bottom
-        shift: [0.334u, -1u]
-      columns:
-        one:
-        two:
-        three:
-          key:
-            height: 1.5u
-            origin: [-0.5u, -0.5u]
-            shift: [0, -1.5]
-            splay: -33
-            
-        four:
-          key:
-            spread: 1u
-            stagger: -0.1u
-            shift: [0, -.25u] 
-        five:
-          key:
-            spread: 0
-            stagger: 1u
-            shift: [0, -.25u]
-      rows:
-        thumb:
-          row_net: P115
-            
+        # Shift the PCB slightly to the right and down, otherwise it's weirdly positioned outside of the main sheet in KiCad
+        shift: [100, -150]
+  
 outlines:
-  left_switch_cutouts:
+  keys:
     - what: rectangle
       where: true
       size: [14, 14]
       fillet: 0
-  left_keycaps:
-    - what: rectangle
-      where: true
-      size: [18, 18]
   board_left:
     - what: polygon
       operation: stack
-      fillet: 1.5
+      
       points:
-        # Top
+        # Top left
         - ref: matrix_outer_top
           shift: [-pad, pad]
+        # Top right
         - ref: matrix_inner_top
-          shift: [40, pad]
-        - ref: thumbfan_five_thumb
-          shift: [pad, 29.12]
-        - ref: thumbfan_four_thumb
+          shift: [pad, pad]
+        # Bottom right
+        - ref: matrix_inner_mod
           shift: [pad, -pad]
-        - ref: matrix_outer_bottom
+        # Bottom right
+        - ref: matrix_outer_mod
           shift: [-pad, -pad]
-
   board_left_with_cutouts:
     - name: board_left
     - operation: subtract
-      name: left_switch_cutouts
-  
-  board_left_with_keycaps:
-    - name: board_left
-    - operation: subtract
-      name: left_keycaps
-  
+      name: keys
+
 
 pcbs:
   left:
     outlines:
       main:
         outline: board_left
-
     footprints:
+      # Key switches
       keyswitches:
-        where: true
         what: mx
+        where: true
         params:
-          hotswap: true
           keycaps: true
-          from: "{{col_net}}"
+          reverse: false
+          hotswap: true
+          from: "{{column_net}}"
           to: "{{colrow}}"
-      diode:
+      # Diodes
+      diode_main:
         what: diode
         where: true
         params:
@@ -114,12 +77,47 @@ pcbs:
           to: "{{row_net}}"
         adjust:
           shift: [0, -9]
+          rotate: 0
+
+      # Controller
       nice_nano:
         what: nice_nano
         params:
           orientation: up
         where:
           ref: matrix_inner_top
-          shift: [22.5, -5.375]
+          shift: [50, -20]
           rotate: -90
-      
+      # Battery jack
+      jstph:
+        what: jstph
+        where:
+          ref: matrix_inner_top
+          shift: [40, 0]
+          rotate: 0
+        params:
+            side: B
+            pos: pos
+            neg: GND
+      # Reset switch (horizontal community version)
+      horizontal_reset:
+        what: EVQPUC
+        params: 
+          side: B
+          from: GND
+          to: RST 
+        where:
+          ref: matrix_inner_top
+          shift: [20, 0]
+          rotate: 0
+      # Battery on/off switch
+      battery_switch:
+        what: slider
+        where:
+            ref: matrix_inner_top
+            shift: [30, 0]
+            rotate: 0
+        params:
+            side: B
+            from: pos
+            to: RAW
