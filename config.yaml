@@ -1,5 +1,7 @@
+# @danielpickett ergogen-keyboard
+
 units:
-  pad: (u / 2) + 2
+  pad: (u / 2)
   
 
 points:
@@ -69,13 +71,20 @@ outlines:
           shift: [-pad, pad]
         # Top right
         - ref: matrix_inner_top
-          shift: [pad + 40, pad]
-        # Bottom right
+          shift: [pad + 20, pad]
+
         - ref: matrix_inner_bottom
-          shift: [pad + 40, -pad - 50]
+          shift: [pad + 20, -18.73]
+
+        - ref: thumbfan_five_thumb
+          shift: [pad, pad + 4.97]
+
+        - ref: thumbfan_four_thumb
+          shift: [pad, -pad]
+        
         # Bottom right
         - ref: matrix_outer_bottom
-          shift: [-pad, -pad - 50]
+          shift: [-pad, -pad - 5]
   board_left_with_key_cutouts:
     - name: board_left
     - operation: subtract
@@ -84,7 +93,6 @@ outlines:
     - name: board_left
     - operation: subtract
       name: keycaps
-
 
 pcbs:
   left:
@@ -110,7 +118,7 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [0, -9.5]
+          shift: [0, -10]
           rotate: 180
 
       # Controller
@@ -120,7 +128,7 @@ pcbs:
           orientation: up
         where:
           ref: matrix_inner_top
-          shift: [20, -10]
+          shift: [pad + 10, -10]
           rotate: -90
 
       # Battery jack
