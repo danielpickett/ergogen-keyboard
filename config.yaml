@@ -143,18 +143,6 @@ pcbs:
             pos: pos
             neg: GND
 
-      # Reset switch (horizontal community version)
-      horizontal_reset:
-        what: EVQPUC
-        params: 
-          side: B
-          from: GND
-          to: RST 
-        where:
-          ref: matrix_inner_top
-          shift: [40, -15]
-          rotate: 0
-
       # Battery on/off switch
       battery_switch:
         what: slider
