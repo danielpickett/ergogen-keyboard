@@ -135,8 +135,8 @@ pcbs:
       jstph:
         what: jstph
         where:
-          ref: matrix_inner_top
-          shift: [40, 0]
+          ref: matrix_pinky_bottom
+          shift: [u / 4, -15]
           rotate: 0
         params:
             side: B
@@ -147,9 +147,9 @@ pcbs:
       battery_switch:
         what: slider
         where:
-            ref: matrix_inner_top
-            shift: [40, -30]
-            rotate: 0
+            ref: matrix_inner_bottom
+            shift: [25.5, 0]
+            rotate: -90
         params:
             side: B
             from: pos
