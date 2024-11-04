@@ -8,12 +8,12 @@ points:
   zones:
     matrix:
       columns:
-        outer.key.column_net: P020 
-        pinky.key.column_net: P022 
-        ring.key.column_net: P024
-        middle.key.column_net: P100 
-        index.key.column_net: P011
-        inner.key.column_net: P017
+        outer.key.column_net: P006 
+        pinky.key.column_net: P008 
+        ring.key.column_net: P017
+        middle.key.column_net: P020 
+        index.key.column_net: P022
+        inner.key.column_net: P024
       rows:
         bottom.row_net: P115
         home.row_net: P002
@@ -26,31 +26,35 @@ points:
         ref: matrix_ring_bottom
         shift: [0.334u, -1u]
       columns:
-        one.key.column_net: P022
-        two.key.column_net: P024
+        one.key.column_net: P008
+        two.key.column_net: P017
         three:
           key:
             height: 1.5u
             origin: [-0.5u, -0.5u]
             shift: [0, -1.5]
             splay: -33
-            column_net: P100
+            column_net: P020
             
         four:
           key:
             spread: 1u
             stagger: -0.1u
             shift: [0, -.25u]
-            column_net: P011
+            column_net: P022
         five:
           key:
             spread: 0
             stagger: 1u
             shift: [0, -.25u]
-            column_net: P017
+            column_net: P024
       rows:
         thumb:
           row_net: P113
+
+  mirror:
+    ref: matrix_inner_top
+    distance: 80
 
 outlines:
   keys:
@@ -61,6 +65,8 @@ outlines:
     - what: rectangle
       where: true
       size: [18.25, 18.25]
+
+  # LEFT MAIN
   board_left:
     - what: polygon
       operation: stack
@@ -85,10 +91,12 @@ outlines:
         # Bottom right
         - ref: matrix_outer_bottom
           shift: [-pad, -pad - 5]
+
   board_left_with_key_cutouts:
     - name: board_left
     - operation: subtract
       name: keys
+
   board_left_with_keycap_cutouts:
     - name: board_left
     - operation: subtract
@@ -106,8 +114,7 @@ pcbs:
         where: true
         params:
           keycaps: true
-          reverse: false
-          # hotswap: true
+          hotswap: true
           from: "{{column_net}}"
           to: "{{colrow}}"
       # Diodes
@@ -118,7 +125,7 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [0, -10]
+          shift: [0, -9.5]
           rotate: 180
 
       # Controller
@@ -131,26 +138,48 @@ pcbs:
           shift: [pad + 10, -10]
           rotate: -90
 
-      # Battery jack
-      jstph:
+      # Battery jack 1
+      jstph1:
         what: jstph
         where:
           ref: matrix_pinky_bottom
-          shift: [u / 4, -15]
-          rotate: 0
+          shift: [12, -15]
+          rotate: -90
         params:
-            side: B
+
             pos: pos
             neg: GND
+
+      # Battery jack 2
+      jstph2:
+        what: jstph
+        where:
+          ref: matrix_inner_bottom
+          shift: [25, 8]
+          rotate: -90
+        params:
+            pos: pos
+            neg: GND
+
+      # Reset switch (horizontal community version)
+      horizontal_reset:
+        what: EVQPUC
+        params: 
+          side: B
+          from: GND
+          to: RST 
+        where:
+          ref: matrix_inner_bottom
+          shift: [25.5, -2]
+          rotate: -90.0
 
       # Battery on/off switch
       battery_switch:
         what: slider
         where:
             ref: matrix_inner_bottom
-            shift: [25.5, 0]
+            shift: [25.5, -12]
             rotate: -90
         params:
-            side: B
             from: pos
             to: RAW
