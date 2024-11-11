@@ -96,13 +96,51 @@ outlines:
     - name: board_left
     - operation: subtract
       name: keys
-
+      
   board_left_with_keycap_cutouts:
     - name: board_left
     - operation: subtract
       name: keycaps
 
+# RIGHT MAIN
+  board_right:
+    - what: polygon
+      operation: stack
+      
+      points:
+        # Top left
+        - ref: mirror_matrix_outer_top
+          shift: [-pad, pad]
+        # Top right
+        - ref: mirror_matrix_inner_top
+          shift: [pad + 20, pad]
+
+        - ref: mirror_matrix_inner_bottom
+          shift: [pad + 20, -18.73]
+
+        - ref: mirror_thumbfan_five_thumb
+          shift: [pad, pad + 4.97]
+
+        - ref: mirror_thumbfan_four_thumb
+          shift: [pad, -pad]
+        
+        # Bottom right
+        - ref: mirror_matrix_outer_bottom
+          shift: [-pad, -pad - 5]
+
+  board_right_with_key_cutouts:
+    - name: board_right
+    - operation: subtract
+      name: keys
+  board_right_with_keycap_cutouts:
+    - name: board_right
+    - operation: subtract
+      name: keycaps
+
+
+
 pcbs:
+  # LEFT PCB
   left:
     outlines:
       main:
@@ -111,22 +149,21 @@ pcbs:
       # Key switches
       keyswitches:
         what: mx
-        where: true
+        where: /^(matrix_|thumbfan_).*/
         params:
           keycaps: true
-          hotswap: true
           from: "{{column_net}}"
           to: "{{colrow}}"
       # Diodes
       diode_main:
         what: diode
-        where: true
+        where: /^(matrix_|thumbfan_).*/mg
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [0, -9.5]
-          rotate: 180
+          shift: [9.5, -3.5]
+          rotate: 90
 
       # Controller
       nice_nano:
@@ -165,7 +202,7 @@ pcbs:
       horizontal_reset:
         what: EVQPUC
         params: 
-          side: B
+          # side: B
           from: GND
           to: RST 
         where:
@@ -178,6 +215,87 @@ pcbs:
         what: slider
         where:
             ref: matrix_inner_bottom
+            shift: [25.5, -12]
+            rotate: -90
+        params:
+            from: pos
+            to: RAW
+
+  # RIGHT PCB
+  right:
+    outlines:
+      main:
+        outline: board_right
+    footprints:
+      # Key switches
+      keyswitches:
+        what: mx
+        where: /^(mirror_matrix_|mirror_thumbfan_).*/mg
+        params:
+          keycaps: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      # Diodes
+      diode_main:
+        what: diode
+        where: /^(mirror_matrix_|mirror_thumbfan_).*/mg
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [9.5, -3.5]
+          rotate: 90
+
+      # Controller
+      nice_nano:
+        what: nice_nano
+        params:
+          orientation: up
+        where:
+          ref: mirror_matrix_inner_top
+          shift: [pad + 10, -10]
+          rotate: 90
+
+      # Battery jack 1
+      jstph1:
+        what: jstph
+        where:
+          ref: mirror_matrix_pinky_bottom
+          shift: [12, -15]
+          rotate: -90
+        params:
+
+            pos: pos
+            neg: GND
+
+      # Battery jack 2
+      jstph2:
+        what: jstph
+        where:
+          ref: mirror_matrix_inner_bottom
+          shift: [25, 8]
+          rotate: -90
+        params:
+            pos: pos
+            neg: GND
+
+      # Reset switch (horizontal community version)
+      horizontal_reset:
+        what: EVQPUC
+        params: 
+          side: B
+          from: GND
+          to: RST 
+        where:
+          ref: mirror_matrix_inner_bottom
+          shift: [25.5, -2]
+          rotate: -90.0
+
+      # Battery on/off switch
+      battery_switch:
+        what: slider
+        where:
+            ref: mirror_matrix_inner_bottom
             shift: [25.5, -12]
             rotate: -90
         params:
