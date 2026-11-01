@@ -1,0 +1,24 @@
+{
+  "zmk_commit": "4dd95d7840eb3d5a3f59bb29fbf1ab054715ef85",
+  "sdk": "Zephyr SDK 0.17.4",
+  "compiler": "GNU Arm 12.2.0",
+  "board": "nice_nano@2.0.0/nrf52840/zmk",
+  "builds": {
+    "left": {
+      "result": "PASS",
+      "shield": "pickett46_left",
+      "flash_bytes": 225936,
+      "ram_bytes": 52240,
+      "uf2_bytes": 452096,
+      "uf2_sha256": "efe28e1f2d64b35ee26a1d6c97f70e5d1968d34b450685f9072725f249901890"
+    },
+    "right": {
+      "result": "PASS",
+      "shield": "pickett46_right",
+      "flash_bytes": 186692,
+      "ram_bytes": 36376,
+      "uf2_bytes": 373760,
+      "uf2_sha256": "e39a364683642fb28ecd3c488ebc4d2cb43b062f0fe2e73b5fafee04744b9337"
+    }
+  }
+}

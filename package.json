@@ -6,9 +6,12 @@
   "author": "Daniel Pickett <daniel@danielpickett.me>",
   "license": "MIT",
   "dependencies": {
-    "ergogen": "^4.1.0"
+    "ergogen": "4.1.0"
   },
   "scripts": {
-    "build": "rm -rf ./output/outlines/* && rm -rf ./output/pcbs/* && ergogen . && open ./output/pcbs/left.kicad_pcb"
+    "build": "ergogen .",
+    "prepare:pcbs": "/usr/bin/python3 scripts/prepare_pcbs.py",
+    "validate": "bash scripts/validate.sh",
+    "fabricate": "bash scripts/fabricate.sh"
   }
 }

@@ -1,0 +1,4 @@
+config SHIELD_PICKETT46_LEFT
+    def_bool $(shields_list_contains,pickett46_left)
+config SHIELD_PICKETT46_RIGHT
+    def_bool $(shields_list_contains,pickett46_right)
