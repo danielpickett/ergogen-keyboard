@@ -1,0 +1,16 @@
+Item,Quantity_total,Quantity_per_half,Reference,Specification,Assembly_side
+PCB left,1,1,,Two-layer FR4 1.6mm 1oz separate left board,
+PCB right,1,1,,Two-layer FR4 1.6mm 1oz separate right board,
+MX hot-swap sockets,46,23,S1-S23,Kailh CPG151101S11 MX socket,Bottom
+MX switches,46,23,S1-S23,MX-compatible 3-pin or 5-pin switches,Top
+Signal diodes,46,23,D1-D23,1N4148W SOD-123 (not SOD-323),Bottom
+Controller,2,1,MCU1,nice!nano v2 nRF52840,Top components facing up USB toward straight top edge
+Controller sockets,4,2,MCU1,1x12 2.54mm pitch sockets rows 15.24mm apart,Top
+Controller mating pins,48,24,MCU1,Compatible with chosen sockets,Controller
+Battery connector,2,1,JST1,JST S2B-PH-K-S(LF)(SN) side-entry 2-pin 2mm,Top
+Power slide switch,2,1,T1,MSK12C02 / LCSC C128955 SPDT,Top
+Reset switch,2,1,B1,Panasonic EVQPUC02K momentary,Top
+Battery,2,1,,Protected single-cell LiPo 3.7V nominal 4.2V maximum rated for 100mA charge minimum; keyed PH lead with verified polarity,Insulated case compartment away from antenna
+1u keycaps,44,22,,MX stem nominal 18.25mm body width,
+1.5u keycaps,2,1,S21,MX stem 1.5u installed lengthwise along local Y,
+Switch plate,2,1,,User-fabricated plate using included cutout outlines; required for retention of hot-swap switches,

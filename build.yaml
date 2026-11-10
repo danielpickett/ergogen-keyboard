@@ -1,0 +1,5 @@
+include:
+  - board: nice_nano@2.0.0/nrf52840/zmk
+    shield: pickett46_left
+  - board: nice_nano@2.0.0/nrf52840/zmk
+    shield: pickett46_right

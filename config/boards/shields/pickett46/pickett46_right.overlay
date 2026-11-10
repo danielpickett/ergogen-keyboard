@@ -1,0 +1,2 @@
+#include "pickett46.dtsi"
+&default_transform { col-offset = <6>; };

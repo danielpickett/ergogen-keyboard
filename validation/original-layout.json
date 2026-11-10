@@ -1,0 +1,328 @@
+{
+  "left": {
+    "S1": {
+      "x": 100.0,
+      "y": 150.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S2": {
+      "x": 100.0,
+      "y": 131.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S3": {
+      "x": 100.0,
+      "y": 112.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S4": {
+      "x": 119.0,
+      "y": 150.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S5": {
+      "x": 119.0,
+      "y": 131.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S6": {
+      "x": 119.0,
+      "y": 112.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S7": {
+      "x": 138.0,
+      "y": 150.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S8": {
+      "x": 138.0,
+      "y": 131.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S9": {
+      "x": 138.0,
+      "y": 112.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S10": {
+      "x": 157.0,
+      "y": 150.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S11": {
+      "x": 157.0,
+      "y": 131.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S12": {
+      "x": 157.0,
+      "y": 112.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S13": {
+      "x": 176.0,
+      "y": 150.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S14": {
+      "x": 176.0,
+      "y": 131.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S15": {
+      "x": 176.0,
+      "y": 112.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S16": {
+      "x": 195.0,
+      "y": 150.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S17": {
+      "x": 195.0,
+      "y": 131.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S18": {
+      "x": 195.0,
+      "y": 112.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S19": {
+      "x": 144.346,
+      "y": 169.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S20": {
+      "x": 163.346,
+      "y": 169.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S21": {
+      "x": 185.170483,
+      "y": 176.964706,
+      "rotation": -33.0,
+      "keycap_width": 18.25,
+      "keycap_height": 27.75
+    },
+    "S22": {
+      "x": 198.300333,
+      "y": 191.632001,
+      "rotation": -33.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S23": {
+      "x": 208.648474,
+      "y": 175.697261,
+      "rotation": -33.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    }
+  },
+  "right": {
+    "S1": {
+      "x": 370.0,
+      "y": 150.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S2": {
+      "x": 370.0,
+      "y": 131.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S3": {
+      "x": 370.0,
+      "y": 112.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S4": {
+      "x": 351.0,
+      "y": 150.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S5": {
+      "x": 351.0,
+      "y": 131.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S6": {
+      "x": 351.0,
+      "y": 112.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S7": {
+      "x": 332.0,
+      "y": 150.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S8": {
+      "x": 332.0,
+      "y": 131.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S9": {
+      "x": 332.0,
+      "y": 112.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S10": {
+      "x": 313.0,
+      "y": 150.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S11": {
+      "x": 313.0,
+      "y": 131.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S12": {
+      "x": 313.0,
+      "y": 112.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S13": {
+      "x": 294.0,
+      "y": 150.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S14": {
+      "x": 294.0,
+      "y": 131.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S15": {
+      "x": 294.0,
+      "y": 112.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S16": {
+      "x": 275.0,
+      "y": 150.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S17": {
+      "x": 275.0,
+      "y": 131.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S18": {
+      "x": 275.0,
+      "y": 112.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S19": {
+      "x": 325.654,
+      "y": 169.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S20": {
+      "x": 306.654,
+      "y": 169.0,
+      "rotation": 0.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S21": {
+      "x": 284.829517,
+      "y": 176.964706,
+      "rotation": 33.0,
+      "keycap_width": 18.25,
+      "keycap_height": 27.75
+    },
+    "S22": {
+      "x": 271.699668,
+      "y": 191.632001,
+      "rotation": 33.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    },
+    "S23": {
+      "x": 261.351526,
+      "y": 175.697261,
+      "rotation": 33.0,
+      "keycap_width": 18.25,
+      "keycap_height": 18.25
+    }
+  }
+}

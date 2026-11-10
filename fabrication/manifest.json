@@ -1,0 +1,50 @@
+{
+  "board_spec": {
+    "layers": 2,
+    "thickness_mm": 1.6,
+    "copper_oz": 1,
+    "material": "FR4",
+    "minimum_track_mm": 0.2,
+    "minimum_clearance_mm": 0.2,
+    "minimum_via_drill_mm": 0.3,
+    "minimum_copper_edge_mm": 0.5
+  },
+  "boards": {
+    "left": {
+      "source_sha256": "81fa27b653af90c52767f798b89bfc4f6cd90ab349d8e7e48f4f1b82b32d270e",
+      "rules_sha256": "9cba18bb3333be286c9e3abf836b0d2ed6b2b6cb67690bc5184ff32413d2ba24",
+      "drc_sha256": "7f605cbee0ebef7638745e8f628be1256fbf292d226c6bf5320a35f7c8da4df2",
+      "zip": "pickett46-left-jlcpcb.zip",
+      "zip_sha256": "d79be9ddc9ea9dddce72a0f4bbcb564a0dd4bca9f5cd487f00cf67bde6860444",
+      "files": {
+        "left-B_Cu.gbl": "d33b479d21d70b0d352ae28790a07d41449901dee951ccba3c8d0424aaefccc7",
+        "left-B_Mask.gbs": "e5cfd8b45ffcfee6ca863ea7e71a350d24e48d5fdcbeaa495089a2f9c8623067",
+        "left-B_Silkscreen.gbo": "36c966ccf12fd6ffc924e04a0f023e14d163f9d0a46adc692eb1ddf18fe84ab6",
+        "left-Edge_Cuts.gm1": "08ea5607b117e493d57c14e47e54e2d6528863b06f35d699cb589f0f2406a5e0",
+        "left-F_Cu.gtl": "48265a0c454a593ed39f6dad444ae0440fb8012a706098528dc1101952095fc2",
+        "left-F_Mask.gts": "e2ab4f40eae61779eb7aec964aecfee7bb457369af794a61c613da5d88930a92",
+        "left-F_Silkscreen.gto": "de309577c16b1a5f9d84ccfe8a946339ce8f2386b0f53b4370839d821c59f155",
+        "left-NPTH.drl": "2fbbc2c57948a64176c9ad0545b8fdb67ec669bdfee8a476048fe13fe4e5e204",
+        "left-PTH.drl": "2c7e9061dfd97af842c47908d3eec4e53be4da80efdae9677da7982467758db8"
+      }
+    },
+    "right": {
+      "source_sha256": "87c678cdaffa50dcc43f96b47a7b7561bce28a0c16963b8af617daa207e5eec0",
+      "rules_sha256": "9cba18bb3333be286c9e3abf836b0d2ed6b2b6cb67690bc5184ff32413d2ba24",
+      "drc_sha256": "60d99f9e91df56ecb3eee6620e4d4967d753b82c51c3b27ca29aa09f0eba27d7",
+      "zip": "pickett46-right-jlcpcb.zip",
+      "zip_sha256": "66646a819def4700c8bfc51a0aad67de7e9af203911d1515233b67c07b18161c",
+      "files": {
+        "right-B_Cu.gbl": "a1eae6867f61a8303375d36ed41750423e33240c9be3bced93325fda7ba9d470",
+        "right-B_Mask.gbs": "a7f47c1ba13ac17245093cca542b04e5c044ba5a0392f0b2215049aeba78ee7c",
+        "right-B_Silkscreen.gbo": "4104ee10e76c66ed454e5603128ba5a6e28ec971901f7c81bf687d34cc842b4d",
+        "right-Edge_Cuts.gm1": "b0969968e13f4a3dbf84e83c7c3e9df712290c58d3b5704def71d2b702692bd3",
+        "right-F_Cu.gtl": "cb721b199561814f879a30d81601642508a433990b619bca027447bf32cb3f3b",
+        "right-F_Mask.gts": "ace46856bc388864cefa7a5afa6c353ac55791aa4db8dd280b9dc20c5dd278ac",
+        "right-F_Silkscreen.gto": "b8bee572cd4b27c61913d07a76a041dadca7ac21165f2850b6a311883332d89f",
+        "right-NPTH.drl": "02bfe7e196d4ec9bbe87aad4ff8ee8cef2293856fcd6301a005404ee2f2dfec5",
+        "right-PTH.drl": "07d7010ce2ada4b239da99f69c23c10757075c5aa4805c8a824260309a8ad5b6"
+      }
+    }
+  }
+}
