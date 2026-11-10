@@ -16,7 +16,7 @@
             bindings = <
                 &trans &kp EXCL &kp AT &kp LPAR &kp RPAR &kp LBKT &kp RBKT &kp GT &kp UP &kp EQUAL &kp PLUS &kp DEL
                 &trans &kp AMPS &kp ASTRK &kp DLLR &kp PRCNT &kp LBRC &kp RBRC &kp LEFT &kp DOWN &kp RIGHT &kp MINUS &kp ENTER
-                &trans &kp GRAVE &kp F24 &kp CIRC &kp HASH &none &none &kp LS(TAB) &kp GRAVE &kp TAB &kp BSLH &trans
+                &trans &kp GRAVE &kp F24 &kp CARET &kp HASH &none &none &kp LS(TAB) &kp GRAVE &kp TAB &kp BSLH &trans
                 &trans &trans &trans &trans &trans &trans &trans &kp ESC &trans &trans
             >;
         };
@@ -24,7 +24,7 @@
             bindings = <
                 &trans &kp EXCL &kp AT &kp LPAR &kp RPAR &kp LBKT &kp RBKT &kp N7 &kp N8 &kp N9 &kp PLUS &kp BSPC
                 &trans &kp AMPS &kp ASTRK &kp DLLR &kp PRCNT &kp LBRC &kp RBRC &kp N4 &kp N5 &kp N6 &kp MINUS &kp ENTER
-                &trans &kp GRAVE &kp F24 &kp CIRC &kp HASH &none &kp N0 &kp N1 &kp N2 &kp N3 &kp DOT &trans
+                &trans &kp GRAVE &kp F24 &kp CARET &kp HASH &none &kp N0 &kp N1 &kp N2 &kp N3 &kp DOT &trans
                 &trans &trans &trans &trans &trans &trans &trans &kp N0 &trans &trans
             >;
         };
