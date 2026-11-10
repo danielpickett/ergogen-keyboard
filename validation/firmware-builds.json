@@ -1,5 +1,6 @@
 {
   "zmk_commit": "4dd95d7840eb3d5a3f59bb29fbf1ab054715ef85",
+  "keymap_commit": "1b7273d736568a312b114b4ec89889b77a178e1f",
   "sdk": "Zephyr SDK 0.17.4",
   "compiler": "GNU Arm 12.2.0",
   "board": "nice_nano@2.0.0/nrf52840/zmk",
@@ -7,10 +8,10 @@
     "left": {
       "result": "PASS",
       "shield": "pickett46_left",
-      "flash_bytes": 225936,
+      "flash_bytes": 226652,
       "ram_bytes": 52240,
-      "uf2_bytes": 452096,
-      "uf2_sha256": "efe28e1f2d64b35ee26a1d6c97f70e5d1968d34b450685f9072725f249901890"
+      "uf2_bytes": 453632,
+      "uf2_sha256": "a48d045ae5ef5ca2cb512c211aa503627b3f7de651a01474f59576b60406b870"
     },
     "right": {
       "result": "PASS",
