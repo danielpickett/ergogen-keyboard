@@ -14,11 +14,12 @@ keyboard, clear its saved settings/bonding before pairing the new pair; use
 ZMK's `settings_reset` shield build for the same nice!nano target, then reflash
 the appropriate keyboard UF2. No reset image is needed for factory-fresh boards.
 
-The base layer is QWERTY. Either innermost thumb key holds the function layer,
-which provides numbers, F1–F12, arrows, and symbols. On that layer, the three
-outer left thumb keys select Bluetooth profiles 0–2 and the outer right thumb
-key clears the current Bluetooth profile. The keymap has exactly 46 bindings
-per layer. Idle sleep is enabled after 15 minutes.
+The keymap is a 46-key adaptation of the owner's prior QMK layout for the
+`dpickett_split_refined2`. It preserves its QWERTY base layer, symbol/navigation
+layer, number layer, and media/function/reset layer. The three dedicated Escape
+keys present on that older keyboard are not present on this 46-key layout.
+The keymap has exactly 46 bindings per layer. Idle sleep is enabled after 15
+minutes.
 
 ## Wiring
 
