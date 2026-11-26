@@ -10,7 +10,7 @@ preserved. Left and right have separate, fully routed two-layer PCBs.
 - [Right JLCPCB ZIP](fabrication/pickett46-right-jlcpcb.zip)
 - [Ordering details](docs/FABRICATION.md)
 - [BOM](docs/BOM.csv) and [assembly instructions](docs/ASSEMBLY.md)
-- [ZMK configuration, flashing and pin mapping](docs/FIRMWARE.md)
+- [Keymap updates, Bluetooth pairing, flashing and pin mapping](docs/FIRMWARE.md)
 
 Both boards pass KiCad **9.0.2** DRC with **zero violations and zero unconnected
 items**, with no DRC exclusions. The ZIPs also pass independent Gerber parsing,
