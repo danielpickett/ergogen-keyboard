@@ -9,3 +9,8 @@ include:
     shield: pickett46_left
     snippet: zmk-usb-logging
     artifact-name: pickett46-left-diagnostic
+  - board: nice_nano@2.0.0/nrf52840/zmk
+    shield: pickett46_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_PHYSICAL_LAYOUT_KEY_ROTATION=y
+    artifact-name: pickett46-left-studio

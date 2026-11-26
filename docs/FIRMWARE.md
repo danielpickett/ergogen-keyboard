@@ -91,6 +91,27 @@ paired on battery using a spare profile. The cause of the installed USB timeouts
 was never isolated. For further diagnosis, compare one variable at a time and
 use the diagnostic image to capture USB logs.
 
+## ZMK Studio
+
+Download `pickett46-left-studio.uf2` from the build's merged `firmware`
+artifact. Flash it to the left controller using the normal bootloader process
+to preserve the host and split bonds. Keep the tested diagnostic UF2 for
+rollback.
+
+1. Connect the left half to the Mac over USB and open
+   [ZMK Studio](https://zmk.studio/) in Chrome or Edge. If the Mac is also
+   connected to the keyboard over Bluetooth, temporarily turn off Mac
+   Bluetooth for this USB session.
+2. Select Pickett46's USB serial port. Hold the two far-left keys in the top
+   and home rows together, then tap **A** to unlock Studio.
+3. Change one binding, save it, and test that key. Preserve the unlock and
+   Bluetooth profile bindings for future sessions.
+
+Studio stores saved bindings on the keyboard. To discard those edits and use
+the bindings compiled into the current firmware, choose **Restore Stock
+Settings** in Studio. The Bluetooth layer combo stays defined in the keymap
+source. [ZMK Studio documentation](https://zmk.dev/docs/features/studio)
+
 ## Wiring
 
 | Signal | nRF GPIO | Controller pad | ZMK matrix |
