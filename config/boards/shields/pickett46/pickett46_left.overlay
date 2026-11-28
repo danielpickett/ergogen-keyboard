@@ -1,0 +1,9 @@
+#include "pickett46.dtsi"
+#include "pickett46-layouts.dtsi"
+
+/ {
+    chosen {
+        /delete-property/ zmk,matrix-transform;
+        zmk,physical-layout = &pickett46_layout;
+    };
+};

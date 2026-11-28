@@ -152,18 +152,19 @@ pcbs:
         where: /^(matrix_|thumbfan_).*/
         params:
           keycaps: true
+          hotswap: true
           from: "{{column_net}}"
           to: "{{colrow}}"
       # Diodes
       diode_main:
-        what: diode
+        what: diode_sod123
         where: /^(matrix_|thumbfan_).*/mg
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [9.5, -3.5]
-          rotate: 90
+          shift: [0, -6.8]
+          rotate: 0
 
       # Controller
       nice_nano:
@@ -175,28 +176,15 @@ pcbs:
           shift: [pad + 10, -10]
           rotate: -90
 
-      # Battery jack 1
+      # Battery jack inside the power switch, facing the controller.
       jstph1:
-        what: jstph
+        what: jstph_side_entry
         where:
-          ref: matrix_pinky_bottom
-          shift: [12, -15]
-          rotate: -90
+          shift: [214, -161.5]
+          rotate: 180
         params:
-
-            pos: pos
-            neg: GND
-
-      # Battery jack 2
-      jstph2:
-        what: jstph
-        where:
-          ref: matrix_inner_bottom
-          shift: [25, 8]
-          rotate: -90
-        params:
-            pos: pos
-            neg: GND
+          pos: pos
+          neg: GND
 
       # Reset switch (horizontal community version)
       horizontal_reset:
@@ -233,18 +221,19 @@ pcbs:
         where: /^(mirror_matrix_|mirror_thumbfan_).*/mg
         params:
           keycaps: true
+          hotswap: true
           from: "{{column_net}}"
           to: "{{colrow}}"
       # Diodes
       diode_main:
-        what: diode
+        what: diode_sod123
         where: /^(mirror_matrix_|mirror_thumbfan_).*/mg
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [9.5, -3.5]
-          rotate: 90
+          shift: [0, -6.8]
+          rotate: 0
 
       # Controller
       nice_nano:
@@ -256,34 +245,21 @@ pcbs:
           shift: [pad + 10, -10]
           rotate: 90
 
-      # Battery jack 1
+      # Battery jack inside the power switch, facing the controller.
       jstph1:
-        what: jstph
+        what: jstph_side_entry
         where:
-          ref: mirror_matrix_pinky_bottom
-          shift: [12, -15]
-          rotate: -90
+          shift: [256, -161.5]
+          rotate: 180
         params:
-
-            pos: pos
-            neg: GND
-
-      # Battery jack 2
-      jstph2:
-        what: jstph
-        where:
-          ref: mirror_matrix_inner_bottom
-          shift: [25, 8]
-          rotate: -90
-        params:
-            pos: pos
-            neg: GND
+          pos: pos
+          neg: GND
 
       # Reset switch (horizontal community version)
       horizontal_reset:
         what: EVQPUC
         params: 
-          side: B
+          side: F
           from: GND
           to: RST 
         where:
