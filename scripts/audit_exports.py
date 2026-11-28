@@ -2,7 +2,7 @@
 """Parse fabrication ZIPs independently and check layers, drills, hashes and cap clearance.
 Requires scripts/requirements-validation.txt. Does not alter manufacturing files.
 """
-import hashlib,json,math
+import hashlib,json,math,zipfile
 from pathlib import Path
 from gerbonara import LayerStack
 from shapely.geometry import box
@@ -16,6 +16,10 @@ reports={}
 for side in ['left','right']:
  m=manifest['boards'][side];p=Path('fabrication')/m['zip']
  assert sha(p)==m['zip_sha256']
+ with zipfile.ZipFile(p) as archive:
+  assert archive.testzip() is None
+  hashes={name:hashlib.sha256(archive.read(name)).hexdigest() for name in archive.namelist()}
+  assert len(archive.namelist())==9 and hashes==m['files']
  assert sha(Path(f'hardware/{side}.kicad_pcb'))==m['source_sha256']
  assert sha(Path(f'hardware/{side}.kicad_dru'))==m['rules_sha256']
  assert sha(Path(f'validation/{side}-drc.json'))==m['drc_sha256']

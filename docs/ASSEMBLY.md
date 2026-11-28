@@ -9,9 +9,10 @@ battery connectors, reset buttons and slide switches go on the **front**.
    Use SOD-123, not visually similar SOD-323 or SOD-123F parts.
 2. Solder the 23 Kailh MX sockets flat against the back. Support each socket from
    below when inserting a switch. These are MX sockets, not Choc sockets.
-3. Fit JST1, T1 and B1. JST1 **pad 1 is battery positive**, pad 2 is GND. Commercial
-   battery leads do not have a universal polarity: measure the actual connector
-   before plugging it in. Do not connect two batteries or an inter-half power cable.
+3. Fit JST1, T1 and B1. JST1 sits just inboard of the power switch with its opening
+   facing the controller. On this revision, **pad 2 is battery positive (marked
+   `+`)** and pad 1 is GND. With the jack disconnected from the PCB, verify
+   that the battery plug mates positive to pad 2 before applying power. Do not connect two batteries or an inter-half power cable.
 4. Fit two 12-pin controller socket rows, 15.24 mm apart. Each nice!nano v2 goes
    component-side up, USB toward the straight top edge. RAW/B+ is the top-right
    controller pin viewed from the front, with USB at the top. Match the printed

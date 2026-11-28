@@ -1,17 +1,19 @@
 # Validation record
 
-All checks ran in Codex Cloud. Production sources are the two boards in
+The original design and firmware checks ran in Codex Cloud. PCB and export
+checks for the relocated battery jacks ran locally. Production sources are the two boards in
 `hardware/`; fabrication ZIPs are linked to those files by SHA-256 manifest.
 
-- KiCad 9.0.2: **0 DRC violations, 0 unconnected items** on each board. No ignored
+- KiCad 10.0.8: **0 DRC violations, 0 unconnected items** on each board. No ignored
   violations or relaxed clearance exceptions. Text and JSON reports included.
 - Electrical audit: 23 MX sockets, 23 SOD-123 diodes, one controller, one battery
-  connector, reset and power switch per half; all pin/net assignments checked.
+  connector, reset and power switch per half. JST1 position, orientation and
+  pad assignments were checked on both boards. Pad 2 is positive and pad 1 is GND.
 - Layout: all 46 centers/rotations match the original within 0.1 µm export
   rounding. Nominal cap models have no overlap; 0.75 mm minimum cap separation,
   1.485 mm minimum controller-to-cap separation.
 - Gerbonara 1.6.3 independently parses both ZIPs. Seven expected Gerber layers,
-  two drill files, 59 plated and 119 non-plated drill hits per half. Every drill
+  two drill files, 57 plated and 119 non-plated drill hits per half. Every drill
   center and diameter matches the PCB source within 0.001 mm. Copper is present
   on both layers. ZIP CRCs and source/output hashes pass.
 - Exported copper/silk previews were inspected. Antenna copper keepouts, separate

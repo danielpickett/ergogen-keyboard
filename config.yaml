@@ -176,17 +176,15 @@ pcbs:
           shift: [pad + 10, -10]
           rotate: -90
 
-      # Battery jack 1
+      # Battery jack inside the power switch, facing the controller.
       jstph1:
-        what: jstph
+        what: jstph_side_entry
         where:
-          ref: matrix_pinky_bottom
-          shift: [12, -15]
-          rotate: -90
+          shift: [214, -161.5]
+          rotate: 180
         params:
-
-            pos: pos
-            neg: GND
+          pos: pos
+          neg: GND
 
       # Reset switch (horizontal community version)
       horizontal_reset:
@@ -247,17 +245,15 @@ pcbs:
           shift: [pad + 10, -10]
           rotate: 90
 
-      # Battery jack 1
+      # Battery jack inside the power switch, facing the controller.
       jstph1:
-        what: jstph
+        what: jstph_side_entry
         where:
-          ref: mirror_matrix_pinky_bottom
-          shift: [12, -15]
-          rotate: -90
+          shift: [256, -161.5]
+          rotate: 180
         params:
-
-            pos: pos
-            neg: GND
+          pos: pos
+          neg: GND
 
       # Reset switch (horizontal community version)
       horizontal_reset:

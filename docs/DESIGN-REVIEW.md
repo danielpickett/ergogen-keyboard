@@ -21,7 +21,7 @@ Each nice!nano uses 24 through-hole socket pads at 2.54 mm pitch, with 15.24 mm
 between rows. Its components face up, USB toward the straight top edge, RAW/B+
 at top right. The original three extra pin holes were removed because the
 matrix does not use the underside auxiliary pins. Controller power goes from
-JST1 pad 1 through T1 to RAW/B+; JST1 pad 2 goes to GND. VCC is the controller's
+JST1 pad 2 through T1 to RAW/B+; JST1 pad 1 goes to GND. VCC is the controller's
 regulated output and does not connect to the battery. B1 momentarily joins RST
 to GND. The unselected T1 throw is deliberately unconnected. Both reset buttons
 are mounted on the front. The duplicate parallel battery connectors are removed.
@@ -34,8 +34,8 @@ placement and RF range require assembly testing.
 The original 46 switch positions/rotations remain within the 0.1 µm Specctra
 rounding tolerance. A nominal keycap-body model uses 18.25 × 18.25 mm on 1u keys
 and 18.25 × 27.75 mm at S21. It gives 0.75 mm minimum keycap separation and
-1.485 mm clearance between keycaps and the nice!nano module body. JST1 is outside
-the adjacent cap envelopes. The PCB outlines and plate cutouts preserve the
+1.485 mm clearance between keycaps and the nice!nano module body. JST1 is inboard of the power switch, facing the controller. Check the
+mated plug and wire bend with the battery in place. The PCB outlines and plate cutouts preserve the
 original geometry; there are no added case or mounting-hole assumptions.
 
 Final evidence is in `validation/`: zero DRC violations, zero unconnected items,

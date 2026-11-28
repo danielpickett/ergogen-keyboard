@@ -7,19 +7,28 @@
     "copper_layers": 2,
     "layout_unchanged": true,
     "pin_assignment_audit": "PASS",
-    "tracks_and_vias": 478,
-    "plated_drill_hits": 59,
+    "tracks_and_vias": 476,
+    "plated_drill_hits": 57,
     "nonplated_drill_hits": 119,
+    "battery_jack": {
+      "position_mm": [
+        214,
+        161.5
+      ],
+      "rotation_deg": 180,
+      "pad_1": "GND",
+      "pad_2": "pos"
+    },
     "drills_mm": {
       "plated": [
         [
-          131.0,
-          -164.0,
+          215.0,
+          -161.5,
           0.75
         ],
         [
-          131.0,
-          -166.0,
+          213.0,
+          -161.5,
           0.75
         ],
         [
@@ -295,16 +304,6 @@
         [
           205.592,
           -179.969,
-          0.3
-        ],
-        [
-          218.119,
-          -158.664,
-          0.3
-        ],
-        [
-          202.737,
-          -171.222,
           0.3
         ]
       ],
@@ -915,19 +914,28 @@
     "copper_layers": 2,
     "layout_unchanged": true,
     "pin_assignment_audit": "PASS",
-    "tracks_and_vias": 494,
-    "plated_drill_hits": 59,
+    "tracks_and_vias": 483,
+    "plated_drill_hits": 57,
     "nonplated_drill_hits": 119,
+    "battery_jack": {
+      "position_mm": [
+        256,
+        161.5
+      ],
+      "rotation_deg": 180,
+      "pad_1": "GND",
+      "pad_2": "pos"
+    },
     "drills_mm": {
       "plated": [
         [
-          339.0,
-          -166.0,
+          257.0,
+          -161.5,
           0.75
         ],
         [
-          339.0,
-          -164.0,
+          255.0,
+          -161.5,
           0.75
         ],
         [
@@ -1198,16 +1206,6 @@
         [
           250.4,
           -149.4,
-          0.3
-        ],
-        [
-          248.7946,
-          -159.7113,
-          0.3
-        ],
-        [
-          252.8558,
-          -168.2755,
           0.3
         ],
         [

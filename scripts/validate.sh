@@ -5,7 +5,7 @@ export XDG_CACHE_HOME="${XDG_CACHE_HOME:-/tmp/pickett46-cache}"
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-/tmp/pickett46-config}"
 export XDG_DATA_HOME="${XDG_DATA_HOME:-/tmp/pickett46-data}"
 mkdir -p "$XDG_CACHE_HOME" "$XDG_CONFIG_HOME" "$XDG_DATA_HOME" validation
-/usr/bin/python3 scripts/audit_board.py
+"${KICAD_PYTHON:-/usr/bin/python3}" scripts/audit_board.py
 for side in left right; do
     kicad-cli pcb drc "hardware/$side.kicad_pcb" --format json --exit-code-violations -o "validation/$side-drc.json"
     kicad-cli pcb drc "hardware/$side.kicad_pcb" --exit-code-violations -o "validation/$side-drc.txt"

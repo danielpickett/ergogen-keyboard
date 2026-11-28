@@ -27,12 +27,17 @@ for side in ['left','right']:
   assert sum(p.GetAttribute()==k.PAD_ATTRIB_NPTH for p in f.Pads())==5
  assert nets('MCU1')=={str(n):v for n,v in enumerate(controller,1)}
  assert fs['MCU1'].GetOrientationDegrees()==-90
- assert nets('JST1')=={'1':'pos','2':'GND'}
+ assert nets('JST1')=={'1':'GND','2':'pos'}
+ jack=fs['JST1']
+ jack_position=(214 if side=='left' else 256,161.5)
+ assert tuple(k.ToMM(jack.GetPosition()))==jack_position
+ assert abs(jack.GetOrientationDegrees())==180
  assert nets('B1')=={'1':'GND','2':'RST'}
  assert nets('T1')=={'1':'pos','2':'RAW','3':''}
  assert len(list(b.Zones()))==1 and next(iter(b.Zones())).GetIsRuleArea()
  assert len(list(b.GetTracks()))>0
  report[side]={'keys':23,'diodes':23,'controllers':1,'battery_connectors':1,'copper_layers':2,'layout_unchanged':True,'pin_assignment_audit':'PASS','tracks_and_vias':len(list(b.GetTracks())), 'plated_drill_hits':sum(p.GetAttribute()==k.PAD_ATTRIB_PTH for f in fs.values() for p in f.Pads())+sum(isinstance(t,k.PCB_VIA) for t in b.GetTracks()), 'nonplated_drill_hits':sum(p.GetAttribute()==k.PAD_ATTRIB_NPTH for f in fs.values() for p in f.Pads())}
+ report[side]['battery_jack']={'position_mm':jack_position,'rotation_deg':180,'pad_1':'GND','pad_2':'pos'}
  # Compare every exported drill coordinate/diameter independently of hit counts.
  drills={'plated':[], 'nonplated':[]}
  for f in fs.values():
