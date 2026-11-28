@@ -12,11 +12,11 @@ preserved. Left and right have separate, fully routed two-layer PCBs.
 - [BOM](docs/BOM.csv) and [assembly instructions](docs/ASSEMBLY.md)
 - [Keymap updates, Bluetooth pairing, flashing and pin mapping](docs/FIRMWARE.md)
 
-Both boards pass KiCad **9.0.2** DRC with **zero violations and zero unconnected
+Both boards pass KiCad **10.0.8** DRC with **zero violations and zero unconnected
 items**, with no DRC exclusions. The ZIPs also pass independent Gerber parsing,
-layer/drill-count checks and source/hash checks. Both left/right firmware UF2s
-were compiled successfully in Codex Cloud. These are digitally validated
-fabrication outputs; a physical prototype has not been assembled or tested.
+layer/drill-count checks and source/hash checks. The relocated battery jacks
+still need a physical fit check. The checked-in UF2s are from the original
+Cloud build. See the firmware guide for later keymap and Studio builds.
 
 | Check | Left | Right |
 |---|---:|---:|
@@ -24,7 +24,7 @@ fabrication outputs; a physical prototype has not been assembled or tested.
 | Copper layers | 2 | 2 |
 | DRC violations | 0 | 0 |
 | Unconnected items | 0 | 0 |
-| Plated / non-plated drill hits | 59 / 119 | 59 / 119 |
+| Plated / non-plated drill hits | 57 / 119 | 57 / 119 |
 | ZMK UF2 build | Pass | Pass |
 
 ## Editable sources and evidence
@@ -35,18 +35,21 @@ footprint library is needed to edit or fabricate them. The adjacent `.kicad_dru`
 files define manufacturing constraints and must stay beside the boards.
 
 `config.yaml` is the active Ergogen layout. `footprints/` contains the custom
-controller, reset and SOD-123 diode generators. `config-mine.yaml` is an unused
-historical experiment. `config/` contains ZMK files; `firmware/` contains the
+controller, reset, SOD-123 diode and side-entry battery jack generators.
+`config/` contains ZMK files; `firmware/` contains the
 compiled images. `validation/` contains DRC, electrical/layout, mechanical,
 Gerber and firmware evidence. `fabrication/manifest.json` records source and
 ZIP SHA-256 hashes. `docs/previews/` shows actual exported copper and silk; the
 bottom-layer images are shown through the board from the front, not mirrored
 assembly views. `docs/plates/` contains the original-layout DXF switch cutouts.
 
+[Case and plate fit prototypes](case/README.md) are available for test prints.
+
 ## Reproduce or edit
 
-Use Node.js with Ergogen 4.1.0, KiCad 9 CLI and KiCad's system Python `pcbnew` API.
-All development and validation for this revision ran in Codex Cloud.
+Use Node.js with Ergogen 4.1.0, the KiCad CLI and KiCad's Python `pcbnew` API.
+Set `KICAD_PYTHON` to the interpreter with `pcbnew` if it differs from
+`/usr/bin/python3`.
 
 ```sh
 npm install

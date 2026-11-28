@@ -25,12 +25,12 @@ The two-layer stack has no internal copper. Antenna rule areas prohibit copper
 and vias beneath the controller antenna ends.
 
 `fabrication/manifest.json` binds the ZIPs and their individual files to the PCB
-source, rule and DRC report hashes. `validation/` contains the KiCad 9.0.2 DRC
+source, rule and DRC report hashes. `validation/` contains the KiCad 10.0.8 DRC
 reports and electrical/layout audit. Export is fail-closed: `bash
 scripts/fabricate.sh` runs those checks before producing either ZIP. The checked-in
 routed `hardware/*.kicad_pcb` files are the manufacturing sources; running Ergogen
 alone produces **unrouted scaffolds**, never replacement fabrication boards.
 
 Review the JLCPCB uploader's layer detection and drill preview before ordering.
-The digital design is checked; physical assembly, RF range and charging have not
-been prototype-tested.
+The earlier PCB revision was assembled and used over Bluetooth. The relocated
+battery jack still needs an assembly, plug clearance and charging check.

@@ -43,5 +43,5 @@ model has 0.75 mm minimum clearance; larger skirt dimensions need separate revie
 The supplied plate outlines are geometric cutouts, not a tested enclosure design.
 
 Digital fabrication checks do not substitute for testing the assembled keyboard.
-No physical prototype, RF range test, charging test or socket insertion test has
-been performed in this cloud environment.
+The earlier PCB revision was assembled and used over Bluetooth. Check jack
+polarity, plug clearance and charging on the relocated-jack revision.
